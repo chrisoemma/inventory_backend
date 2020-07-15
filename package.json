@@ -1,0 +1,27 @@
+{
+    "name": "inventory",
+    "version": "1.0.0",
+    "description": "Africana inventory backend",
+    "main": "index.js",
+    "scripts": {
+
+        "start": "nodemon server.js"
+    },
+    "repository": {
+
+        "type": "git",
+        "url": "git+https://github.com/chrisoemma/inventory_backend.git"
+    },
+    "author": "chrisso",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chrisoemma/inventory_backend/issues"
+    },
+    "homepage": "https://github.com/chrisoemma/inventory_backend#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
