@@ -5,7 +5,8 @@ import cookieParser from 'cookie-parser'
 const logger = require('morgan'); 
 import ExpenseRouter  from './routes/api/expense';
 import ExpenseCategoryRouter  from './routes/api/expenseCategory';
-import PaymentMethodRouter from './routes/api/paymentMethod'
+import PaymentMethodRouter from './routes/api/paymentMethod';
+import LocationRouter from './routes/api/location';
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/expenses', ExpenseRouter);
 app.use('/api/v1/expense_categories', ExpenseCategoryRouter);
 app.use('/api/v1/payment_methods', PaymentMethodRouter);
+app.use('/api/v1/locations', LocationRouter);
 
 //error hundleling 
 app.use((res, req, next) => {
