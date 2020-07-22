@@ -2,13 +2,10 @@
     "name": "inventory",
     "version": "1.0.0",
     "description": "Africana inventory backend",
-    "main": "index.js",
     "scripts": {
-
-        "start": "nodemon server.js"
+        "start": "nodemon -r esm ./bin/www"
     },
     "repository": {
-
         "type": "git",
         "url": "git+https://github.com/chrisoemma/inventory_backend.git"
     },
@@ -19,7 +16,14 @@
     },
     "homepage": "https://github.com/chrisoemma/inventory_backend#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "cookie-parser": "^1.4.5",
+        "core-util-is": "^1.0.2",
+        "dotenv": "^8.2.0",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0",
+        "pg": "^8.3.0",
+        "sequelize": "^6.3.3"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
