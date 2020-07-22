@@ -8,6 +8,7 @@ import ExpenseCategoryRouter  from './routes/api/expenseCategory';
 import PaymentMethodRouter from './routes/api/paymentMethod';
 import LocationRouter from './routes/api/location';
 import RegionRouter from './routes/api/region';
+import OutletRouter from './routes/api/outlet';
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/v1/expense_categories', ExpenseCategoryRouter);
 app.use('/api/v1/payment_methods', PaymentMethodRouter);
 app.use('/api/v1/locations', LocationRouter);
 app.use('/api/v1/regions', RegionRouter);
+app.use('/api/v1/outlets', OutletRouter);
 
 //error hundleling 
 app.use((res, req, next) => {
