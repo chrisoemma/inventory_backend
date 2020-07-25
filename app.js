@@ -28,6 +28,18 @@ app.use('/api/v1/regions', RegionRouter);
 app.use('/api/v1/outlets', OutletRouter);
 app.use('/api/v1/vendors', VendorRouter);
 
+
+//prevent cors errors
+app.use((req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept,Authorization');
+	if (req.method === "OPTIONS") {
+		res.header('Access-Control-Allow-Methods', 'PUT,PATCH,POST,GET,DELETE');
+		return res.status(200).json({});
+	}
+	next();
+  });
+
 //error hundleling 
 app.use((res, req, next) => {
 	const error = new Error('Not found');
