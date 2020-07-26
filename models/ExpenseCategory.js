@@ -11,7 +11,9 @@ const ExpenseCategory= db.define('expense_categories', {
     name: {
         type: Sequelize.STRING
 	},
-	
+    code: {
+        type: Sequelize.STRING
+	},
    
 });
 
